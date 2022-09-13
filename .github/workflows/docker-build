@@ -8,7 +8,8 @@ on:
 steps:
   - uses: actions/checkout@v2
     name: Check out code
-
+uses: mr-smithers-excellent/docker-build-push@v5
+with:
     image: filmgirl82/auto-blog-poster
     registry: docker.io
     username: ${{ secrets.DOCKER_USERNAME }}
