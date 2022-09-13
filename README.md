@@ -47,3 +47,5 @@ To run this, you need to set the following environment variables:
 | DEV_TO_ORGANIZATION_ID | Your Dev.to organization Id. This is optional, if you don't want to post to an organization, don't set this |
 | REPO | The GitHub repo to read blog posts from |
 | GITHUB_ACCESS_TOKEN | Your GitHub access token |
+
+That's all folks
