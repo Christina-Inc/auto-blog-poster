@@ -48,4 +48,4 @@ To run this, you need to set the following environment variables:
 | REPO | The GitHub repo to read blog posts from |
 | GITHUB_ACCESS_TOKEN | Your GitHub access token |
 
-That's all folks
+That's all folks!
