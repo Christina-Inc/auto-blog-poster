@@ -3,17 +3,23 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+jobs:
 
-steps:
-  - uses: actions/checkout@v2
-    name: Check out code
+  build:
 
-  - uses: mr-smithers-excellent/docker-build-push@v5
-    name: Build & push Docker image
-    with:
-      image: filmgirl82/auto-blog-poster
-      tags: v1, latest
-      registry: docker.io
-      dockerfile: Dockerfile.ci
-      username: ${{ secrets.DOCKER_USERNAME }}
-      password: ${{ secrets.DOCKER_PASSWORD }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Check out code
+
+    - name: Build & push Docker image 
+      uses: mr-smithers-excellent/docker-build-push@v5
+    
+      with:
+       image: filmgirl82/auto-blog-poster
+       tags: v1, latest
+       registry: docker.io
+       dockerfile: Dockerfile.ci
+       username: ${{ secrets.DOCKER_USERNAME }}
+       password: ${{ secrets.DOCKER_PASSWORD }}
