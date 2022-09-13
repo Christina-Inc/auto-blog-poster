@@ -1,16 +1,13 @@
-name: Build & push Docker image
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
+steps:
   - uses: actions/checkout@v2
     name: Check out code
-uses: mr-smithers-excellent/docker-build-push@v5
-with:
-    image: filmgirl82/auto-blog-poster
-    registry: docker.io
-    username: ${{ secrets.DOCKER_USERNAME }}
-    password: ${{ secrets.DOCKER_PASSWORD }}
+
+  - uses: mr-smithers-excellent/docker-build-push@v5
+    name: Build & push Docker image
+    with:
+      image: filmgirl82/auto-blog-poster
+      tags: v1, latest
+      registry: docker.io
+      dockerfile: Dockerfile.ci
+      username: ${{ secrets.DOCKER_USERNAME }}
+      password: ${{ secrets.DOCKER_PASSWORD }}
