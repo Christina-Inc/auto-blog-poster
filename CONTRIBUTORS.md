@@ -3,8 +3,8 @@
 Shout out to our top contributors!
 
 - [erikaheidi](https://api.github.com/users/erikaheidi)
-- [lotfio](https://api.github.com/users/lotfio)
 - [github-actions[bot]](https://api.github.com/users/github-actions%5Bbot%5D)
+- [lotfio](https://api.github.com/users/lotfio)
 - [AbdelrhmanSaid](https://api.github.com/users/AbdelrhmanSaid)
 - [syntaxseed](https://api.github.com/users/syntaxseed)
 - [tombenevides](https://api.github.com/users/tombenevides)
